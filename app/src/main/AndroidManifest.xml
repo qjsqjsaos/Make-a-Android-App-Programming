@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SampleOrientiation2">
-        <activity android:name=".MainActivity">
+        //android:screenOrientation="landscape"를 넣으면 가로방향으로 고정된다.
+        <activity android:name=".MainActivity"
+                android:screenOrientation="landscape"
+                android:configChanges="orientation|screenSize|keyboardHidden"> //방향전환시 액티비티 유지하기 키보드 히든은 키보드가 자동으로 나오는 것을 방지한다.
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
