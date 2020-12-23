@@ -9,6 +9,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.material.snackbar.BaseTransientBottomBar;
+import com.google.android.material.snackbar.Snackbar;
+
 public class MainActivity extends AppCompatActivity {
 
     EditText editText;
@@ -34,6 +37,11 @@ public class MainActivity extends AppCompatActivity {
         } catch (NumberFormatException e) { //예외에 대한 정보가 담겨있다.
             e.printStackTrace();
         }
+    }
+    //스낵바 만들기 (토스트 모양 바꾸기는 토스트가 잘 적용이 안되서 스킵함
+
+    public void onButton3Clicked(View v) {
+        Snackbar.make(v, "스낵바입니다", Snackbar.LENGTH_LONG).show();
     }
 }
 //이 과정들을 시도해보니 토스트의 위치가 변경되지 않는 듯하여 검색해보니, API가 R이상부터는 렌더링이 되지 않아
